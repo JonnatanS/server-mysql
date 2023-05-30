@@ -1,9 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
-    <title>
-      Exemplo de Nodejs salvando dados em base de dados Mysql usando expressJs
-    </title>
+    <title>Exemplo de Node.js: Formulário de Livros</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
@@ -16,31 +14,77 @@
       <% if (messages.success) { %>
       <p class="alert alert-success mb-3"><%- messages.success %></p>
       <% } %>
-      <form action="user_form" method="POST">
+      <form action="/user_form" method="POST">
         <div class="mb-2">
           <input
             type="text"
             class="form-control"
-            id="name"
-            placeholder="Nome"
-            name="name"
+            id="Nome_Livro"
+            placeholder="Nome do Livro"
+            name="Nome_Livro"
           />
         </div>
         <div class="mb-2">
           <input
-            type="email"
+            type="text"
             class="form-control"
-            id="email"
-            name="email"
-            placeholder="Email"
+            id="ISBN13"
+            placeholder="ISBN-13"
+            name="ISBN13"
           />
         </div>
         <div class="mb-2">
-          <textarea
-            name="message"
+          <input
+            type="text"
             class="form-control"
-            placeholder="Mensagem"
-          ></textarea>
+            id="ISBN10"
+            placeholder="ISBN-10"
+            name="ISBN10"
+          />
+        </div>
+        <div class="mb-2">
+          <input
+            type="text"
+            class="form-control"
+            id="ID_Categoria"
+            placeholder="ID da Categoria"
+            name="ID_Categoria"
+          />
+        </div>
+        <div class="mb-2">
+          <input
+            type="text"
+            class="form-control"
+            id="ID_Autor"
+            placeholder="ID do Autor"
+            name="ID_Autor"
+          />
+        </div>
+        <div class="mb-2">
+          <input
+            type="text"
+            class="form-control"
+            id="ID_Editora"
+            placeholder="ID da Editora"
+            name="ID_Editora"
+          />
+        </div>
+        <div class="mb-2">
+          <input
+            type="date"
+            class="form-control"
+            id="Data_Pub"
+            name="Data_Pub"
+          />
+        </div>
+        <div class="mb-2">
+          <input
+            type="number"
+            class="form-control"
+            id="Preco_Livro"
+            placeholder="Preço do Livro"
+            name="Preco_Livro"
+          />
         </div>
         <button type="submit" class="btn btn-dark">Armazenar</button>
       </form>
